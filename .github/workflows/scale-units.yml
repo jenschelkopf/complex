@@ -1,0 +1,93 @@
+name: Staged Release
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix: 
+        enumerator: [1, 2, 3]
+
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+  
+  release-0:
+    needs: build
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  publish-cm-record-0:
+    needs: release-0
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  release-1:
+    needs: release-0
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  publish-cm-record-1:
+    needs: release-1
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  release-2:
+    needs: release-1
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  publish-cm-record-2:
+    needs: release-2
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  release-3:
+    needs: release-2
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  publish-cm-record-3:
+    needs: release-3
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  release-4:
+    needs: release-2
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+  publish-cm-record-3:
+    needs: release-4
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
