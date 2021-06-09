@@ -77,7 +77,7 @@ jobs:
         run: echo Hello, world!
         
   release-4:
-    needs: release-2
+    needs: release-3
     runs-on: ubuntu-latest
     
     steps:
