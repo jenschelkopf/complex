@@ -84,7 +84,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-  publish-cm-record-3:
+  publish-cm-record-4:
     needs: release-4
     runs-on: ubuntu-latest
     
